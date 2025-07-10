@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<!-- saved from url=(0055)file:///C:/Users/anag/Downloads/Formulario_Cliente.html -->
+<html lang="es"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Formulario Cliente – Información Logística y Comercial</title>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #eef2f7;
+      padding: 2rem;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #1a3d7c;
+      margin-bottom: 2rem;
+    }
+    form {
+      max-width: 900px;
+      margin: auto;
+    }
+    details {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    summary {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #1a3d7c;
+      cursor: pointer;
+      outline: none;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    .checkbox-group {
+      margin-top: 0.5rem;
+    }
+    .checkbox-group label {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-top: 0.5rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    h4 {
+      margin-top: 1.5rem;
+      color: #1a3d7c;
+    }
+  </style>
+</head>
+<body>
+<h1>Formulario Cliente – Información Logística y Comercial</h1>
+<form action="https://formsubmit.co/tucorreo@ejemplo.com" method="POST">
+  <input type="hidden" name="_next" value="gracias.html">
+  <input type="hidden" name="_captcha" value="false">
+<!-- INCOTERMS -->
+<details>
+<summary>1. INCOTERMS</summary>
+<label>Incoterm habitual</label>
+<select name="incoterm" required=""><option value="">Seleccione un incoterm</option><option value="FCA">FCA – Free Carrier</option><option value="CPT">CPT – Carriage Paid To</option><option value="CIP">CIP – Carriage and Insurance Paid To</option><option value="DDP">DDP – Delivered Duty Paid</option><option value="FOB">FOB – Free On Board</option><option value="CFR">CFR – Cost and Freight</option><option value="OTRO">Otro</option></select><div id="incoterm_otro" style="display:none; margin-top:1rem;"><label>Por favor, especifique el Incoterm:</label><input name="incoterm_otro" type="text"/></div>
+<label>Observaciones especiales de comercio internacional</label>
+<textarea name="observaciones_incoterm" rows="3"></textarea>
+</details>
+<!-- Puertos -->
+<details>
+<summary>2. Puertos de destino</summary>
+<label>Puerto marítimo destino habitual</label>
+<textarea name="puerto_maritimo" rows="2"></textarea>
+<label>Puerto aéreo destino habitual</label>
+<textarea name="puerto_aereo" rows="2"></textarea>
+</details>
+<!-- Facturación -->
+<details>
+<summary>3. Facturación</summary>
+<label>Nombre comercial / razón social</label>
+<textarea name="razon_social" rows="2"></textarea>
+<label>Dirección específica para facturación</label>
+<textarea name="direccion_facturacion" rows="2"></textarea>
+<label>¿Qué necesitan que aparezca en la documentación?</label>
+<textarea name="documentacion_necesaria" rows="2"></textarea>
+<label>Indique qué y cómo desea que aparezca la información en la factura</label>
+<textarea name="info_factura_personalizada" rows="2"></textarea>
+<label>Idioma</label>
+<textarea name="idioma" rows="2"></textarea>
+</details>
+<!-- Muestras -->
+<details>
+<summary>4. Muestras</summary>
+<label>¿Courier propio o nuestro?</label>
+<div class="checkbox-group">
+<label><input name="courier[]" type="checkbox" value="cliente"/> Courier del cliente</label>
+<label><input name="courier[]" type="checkbox" value="empresa"/> Courier de nuestra empresa</label>
+</div>
+<label>Nombre del destinatario</label><textarea name="nombre_destinatario" rows="2"></textarea>
+<label>Dirección si no es la habitual</label><textarea name="direccion_envio_alternativa" rows="2"></textarea>
+<label>Dirección documentación si no es la habitual</label><textarea name="direccion_documentacion_alternativa" rows="2"></textarea>
+<label>Teléfono</label><input name="telefono_muestras" type="tel"/>
+<label>Email</label><input name="email_muestras" type="email"/>
+<label>Persona de contacto</label><textarea name="contacto_muestras" rows="2"></textarea>
+</details>
+<!-- Forwarders -->
+<details>
+<summary>5. Forwarders / Agentes de carga</summary>
+
+<label>¿Consolidan ustedes o consolidan con nosotros (VIDARA)?</label>
+<textarea name="consolidacion_vidara" rows="2"></textarea>
+
+<h4>Origen</h4>
+<label>Empresa de forwarding</label><textarea name="forward_origen" rows="2"></textarea>
+<label>Persona de contacto</label><textarea name="contacto_origen" rows="2"></textarea>
+<label>Email</label><input name="email_origen" type="email"/>
+<h4>Destino</h4>
+<label>Empresa de forwarding</label><textarea name="forward_destino" rows="2"></textarea>
+<label>Persona de contacto</label><textarea name="contacto_destino" rows="2"></textarea>
+<label>Email</label><input name="email_destino" type="email"/>
+</details>
+<!-- Información comercial -->
+<details>
+<summary>6. Información comercial</summary>
+<label>Certificaciones necesarias</label>
+<div class="checkbox-group">
+<label><input name="certificaciones[]" type="checkbox" value="FOOD"/> FOOD</label>
+<label><input name="certificaciones[]" type="checkbox" value="KOSHER"/> KOSHER</label>
+<label><input name="certificaciones[]" type="checkbox" value="HALAL"/> HALAL</label>
+<label><input name="certificaciones[]" type="checkbox" value="FEED"/> FEED</label>
+<label><input name="certificaciones[]" type="checkbox" value="REACH"/> REACH</label>
+<label><input name="certificaciones[]" type="checkbox" value="PHARMA GRADE"/> PHARMA GRADE</label>
+<label><input name="certificaciones[]" type="checkbox" value="OTROS"/> OTROS</label>
+</div>
+<label>Si ha marcado "OTROS", por favor especifique:</label>
+<textarea name="otros_certificaciones" rows="3"></textarea>
+<label>¿A qué mercado se dedican?</label>
+<div class="checkbox-group">
+<label><input name="mercado[]" type="checkbox" value="PERFUMERÍA"/> PERFUMERÍA</label>
+<label><input name="mercado[]" type="checkbox" value="FINE FRAGRANCE"/> FINE FRAGRANCE</label>
+<label><input name="mercado[]" type="checkbox" value="HOMECARE"/> HOMECARE</label>
+<label><input name="mercado[]" type="checkbox" value="PERSONALCARE"/> PERSONALCARE</label>
+<label><input name="mercado[]" type="checkbox" value="AMBIENTACIÓN"/> AMBIENTACIÓN</label>
+<label><input name="mercado[]" type="checkbox" value="HOUSEHOLD"/> HOUSEHOLD</label>
+<label><input name="mercado[]" type="checkbox" value="AROMAS"/> AROMAS</label>
+<label><input name="mercado[]" type="checkbox" value="ALIMENTACIÓN HUMANA"/> ALIMENTACIÓN HUMANA</label>
+<label><input name="mercado[]" type="checkbox" value="ALIMENTACIÓN ANIMAL"/> ALIMENTACIÓN ANIMAL</label>
+<label><input name="mercado[]" type="checkbox" value="FARMACIA"/> FARMACIA</label>
+<label><input name="mercado[]" type="checkbox" value="OTROS"/> OTROS</label>
+</div>
+<label>Dirección de correo (para envío de documentación producto, facturas, ofertas)</label>
+<input name="correo_envio_documentacion" placeholder="ejemplo@correo.com" type="email"/>
+<label>Dirección física de envío (para documentación BL, AWB, facturas, ofertas)</label>
+<textarea name="direccion_envio_fisico" rows="2"></textarea>
+</details>
+<button type="submit" style="margin-top:20px; padding:10px 20px; background:#1a3d7c; color:#fff; border:none; border-radius:5px; cursor:pointer;">Enviar formulario</button>
+</form>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var select = document.querySelector('select[name="incoterm"]');
+    var otroInput = document.getElementById("incoterm_otro");
+
+    function toggleOtroField() {
+        if (select.value === "OTRO") {
+            otroInput.style.display = "block";
+        } else {
+            otroInput.style.display = "none";
+        }
+    }
+
+    select.addEventListener("change", toggleOtroField);
+    toggleOtroField();
+});
+</script></body></html>
